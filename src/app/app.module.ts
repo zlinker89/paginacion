@@ -5,18 +5,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { PaginatePipe } from './pipes/paginate.pipe';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginatorModule, MatPaginatorIntl} from '@angular/material/paginator';
+import { getEpanolPaginatorIntl } from './components/task-list/paginator-es';
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
-    PaginatePipe
+    PaginatePipe,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [
+    { provide: MatPaginatorIntl, useValue: getEpanolPaginatorIntl() }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
