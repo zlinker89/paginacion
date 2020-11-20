@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let task of datos | paginate:pageSize:pageNumber">
+    <ul>
+      <li *ngFor="let prop of task | keyvalue">
+        {{ prop.key }} -
+        {{ prop.value }}
+      </li>
+    </ul>
+  </li>
+</ul>
