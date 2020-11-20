@@ -1,7 +1,5 @@
-<mat-paginator [length]="datos.length"
-              [pageSize]="pageSize"
-              [pageSizeOptions]="[5, 10, 25, 100]"
-              (page)="handlePage($event)">
+<mat-paginator [length]="datos.length" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 25, 100]"
+  (page)="handlePage($event)" [showFirstLastButtons]="true">
 </mat-paginator>
 <ul>
   <li *ngFor="let task of datos | paginate:pageSize:pageNumber">

@@ -18,6 +18,8 @@ export function getEpanolPaginatorIntl(): MatPaginatorIntl{
   paginatorIntl.itemsPerPageLabel = 'Items por pagina:';
   paginatorIntl.nextPageLabel = 'Siguiente';
   paginatorIntl.previousPageLabel = 'Atras';
+  paginatorIntl.lastPageLabel = 'Ultima pagina';
+  paginatorIntl.firstPageLabel = 'Primera pagina';
   paginatorIntl.getRangeLabel = spanishRangeLabel;
   return paginatorIntl;
 }
